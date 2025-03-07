@@ -1,0 +1,293 @@
+/*
+filename: style.css
+author: Osama Nadeem
+description: Assignment 1 - CSS Styles
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    background-image: url("https://media.istockphoto.com/id/1443022226/photo/black-leather-texture-background.webp?b=1&s=170667a&w=0&k=20&c=JluczfcCJXPyUSgATnnnuA33X2Rma_pOfDif9LdTb9Y="); 
+
+}
+
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity here */
+    z-index: 1;
+  }
+
+/* Header Styles */
+header {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    padding: 30px;
+    height: 50px;
+}
+
+/* Navigation Styles */
+nav {
+    flex-grow: 1;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+nav ul li a:hover {
+    color: #D0BCFF;
+}
+
+/* Logo Styles */
+.logo img {
+    max-width: 150px;
+}
+
+.logo h1 {
+    margin-left: 10px; 
+    color: #fff; 
+}
+
+/* Content Section Styles */
+.content {
+    display: flex;
+    margin-top: 50px;
+}
+
+.left {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.right {
+    flex: 1;
+    padding-right: 20px;
+    text-align: right;
+}
+
+/* Gradient Text */
+.gradient-text {
+    background: linear-gradient(to right, #F84FFF, #FFFFFF42, #02023BB3); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Email Button Styles */
+.email-button {
+    background-color: #02023BB3; 
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.email-button:hover {
+    background-color: #FFFFFF42; 
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Email Styles */
+.email p {
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+/* Job Box Styles */
+.job-box {
+    border: 2px solid transparent;
+    background-image: linear-gradient(to bottom right, #02023BB3, #FFFFFF42, #02023BB3);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    transition: border-color 0.3s ease;
+    border-radius: 15px;
+    margin-bottom: 5%;
+}
+
+.job-box:hover {
+    border-color: #fff;
+}
+
+/* Main Content Area Styles */
+.main {
+    display: flex;
+    justify-content: space-between; 
+}
+
+main {
+    text-align: left; 
+}
+
+.card {
+    position: relative;
+    width: calc(50% - 20px); 
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px auto 20px; 
+    overflow: hidden;
+}
+
+.card-header {
+    background-color: #666666;
+    color: #fff;
+    font-size: 1.2em;
+    padding: 12px;
+    text-align: center;
+}
+
+.card-content {
+    position: relative;
+    padding: 20px;
+    background-color: #979797;
+}
+
+.card-content dl dt {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.card-content dl dd {
+    margin-bottom: 10px;
+}
+
+.card-content dl dt,
+.card-content dl dd {
+    display: inline-block;
+    margin-right: 10px; 
+}
+
+.card-content dl dd {
+    display: block; 
+}
+
+/* Picture Container Styles */
+.picture-container {
+    position: absolute;
+    top: 50px; 
+    right: 20px; 
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.picture-container img {
+    max-width: 100%; 
+    border-radius: 8px;
+}
+
+/* Timetable Styles */
+.timetable {
+    border-collapse: collapse; 
+    width: 100%;
+}
+
+.timetable th,
+.timetable td {
+    border: 1px solid #ddd; 
+    padding: 8px; 
+    text-align: center; 
+}
+
+.timetable th {
+    background-color: #bcb8b8; 
+}
+
+/* GIF Container Styles */
+.gif-container {
+    position: fixed;
+    bottom: 58px; 
+    right: 20px; 
+    z-index: 9999;
+    pointer-events: none;
+}
+
+.gif-container img {
+    max-width: 300px;
+    max-height: 300px;
+}
+
+/* Button Container Styles */
+.button-container {
+    text-align: center;
+}
+
+/* Gradient Button Styles */
+.gradient-button {
+    background-image: linear-gradient(to right, #02023BB3, #F84FFF);
+    color: #fff;
+    padding: 15px 70px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 620px;
+    transition: background-color 0.9s ease;
+}
+
+.gradient-button:hover {
+    background-image: linear-gradient(to right, #FF416C, #FF4B2B);
+}
+
+/* Error Styles */
+.error {
+    border: 1px solid red;
+}
+
+.styled-textbox {
+    border: 1px ; /* White dotted boundary */
+    background-color: black;   /* Black background */
+    color: white;              /* White text color */
+    padding: 10px;             /* Padding for content */
+    width: 300px;              /* Adjust width as needed */
+    border-radius: 5px;        /* Optional: Rounded corners */
+    outline: none;             /* Optional: Remove default focus outline */
+  }
+
+  .img-content {
+    max-width: 50%;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+  }
+
+
+  .error-message {
+    color: red;
+    font-size: 0.875em;
+}
+
+  /* Error styling */
+.error {
+    color: rgb(217, 51, 106);
+    font-size: 0.8em;
+    display: none; /* Hide by default */
+}
