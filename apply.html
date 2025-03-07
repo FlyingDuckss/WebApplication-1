@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<script src="scripts/apply.js"></script>
+<script src="scripts/enhancements.js"></script>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo">
+        </div>
+        <h1>Pro DBA</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="apply.html">Apply</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="enhancements.html">Enhancements</a></li>
+                <li><a href="enhancement2.html">Javascript Enhancements</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <form id="candidateForm" action="https://mercury.swin.edu.au/it000000/formtest.php" method="post" novalidate>
+            <section class="card">
+                <div class="card-header">Job Reference Number</div>
+                <div class="card-content">
+                    <label for="jobRef">Job Reference Number:</label>
+                    <input type="text" id="jobRef" name="jobRef" pattern=".{5}" title="5 alphanumeric characters" placeholder="XXXXX" required readonly>
+                </div>
+            </section>
+        
+            <section class="card">
+                <div class="card-header">Personal Information</div>
+                <div class="card-content">
+                    <label for="first-name">First Name:</label>
+                    <input type="text" id="first-name" name="first-name" maxlength="20" required><br>
+                    <span class="error" id="first-name-error"></span>
+                    <br>
+
+                    <label for="last-name">Last Name:</label>
+                    <input type="text" id="last-name" name="last-name" maxlength="20" required><br>
+                    <span class="error" id="last-name-error"></span>
+                    <br>
+        
+                    <label for="dob">Date of Birth:</label>
+                    <input type="text" id="dob" name="dob" pattern="\d{2}/\d{2}/\d{4}" placeholder="dd/mm/yyyy" required><br>
+                    <span class="error" id="dob-error"></span>
+                    <br>
+        
+                    <fieldset>
+                        <legend>Gender:</legend>
+                        <label><input type="radio" name="gender" value="male" required> Male</label>
+                        <label><input type="radio" name="gender" value="female" required> Female</label>
+                        <label><input type="radio" name="gender" value="other" required> Other</label>
+                    </fieldset>
+                    <span class="error" id="gender-error"></span>
+                </div>
+            </section>
+        
+            <section class="card">
+                <div class="card-header">Address Information</div>
+                <div class="card-content">
+                    <label for="street-address">Street Address:</label>
+                    <input type="text" id="street-address" name="street-address" maxlength="40" required><br>
+                    <span class="error" id="street-address-error"></span>
+                    <br>
+
+                    <label for="suburb-town">Suburb/Town:</label>
+                    <input type="text" id="suburb-town" name="suburb-town" maxlength="40" required><br>
+                    <span class="error" id="suburb-town-error"></span>
+                    <br>
+        
+                    <label for="state">State:</label>
+                    <select id="state" name="state" required>
+                        <option value="">Select</option>
+                        <option value="VIC">VIC</option>
+                        <option value="NSW">NSW</option>
+                        <option value="QLD">QLD</option>
+                        <option value="NT">NT</option>
+                        <option value="WA">WA</option>
+                        <option value="SA">SA</option>
+                        <option value="TAS">TAS</option>
+                        <option value="ACT">ACT</option>
+                    </select>
+                    <span class="error" id="state-error"></span>
+                    <br><br>
+        
+                    <label for="postcode">Postcode:</label>
+                    <input type="text" id="postcode" name="postcode" pattern="\d{4}" required>
+                    <span class="error" id="postcode-error"></span>
+                </div>
+            </section>
+        
+            <section class="card">
+                <div class="card-header">Contact Information</div>
+                <div class="card-content">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required><br><br>
+        
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" pattern="\d{8,12}" required>
+                    <span class="error" id="phone-error"></span>
+                </div>
+            </section>
+        
+            <section class="card">
+                <div class="card-header">Skills</div>
+                <div class="card-content">
+                    <label for="skills">Skills:</label>
+                    <select id="skills" name="skills" required>
+                        <option value="">Select</option>
+                        <option value="Azure">Azure</option>
+                        <option value="AWS">AWS</option>
+                        <option value="Dynamo">Dynamo</option>
+                        <option value="SQL">SQL</option>
+                        <option value="others">Other skills...</option>
+                    </select><br><br>
+                    <label for="other-skills">Other Skills:</label>
+                    <input type="text" id="other-skills" name="other-skills">
+                </div>
+            </section>
+            <button type="submit" value="apply" class="gradient-button">Apply</button>
+        </form>
+
+        <br>
+    </main>
+    
+    <footer>
+        <div class="email">
+            <p>Email: 104659862@student.swinburne.edu</p>
+        </div>
+    </footer>
+</body>
+</html>
